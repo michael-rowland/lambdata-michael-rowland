@@ -19,7 +19,6 @@ class Player():
     def box_score(self):
         return f'{self.name} ({self.handedness}) - #{self.number} - {self.position_map()}'
 
-
 class Batter(Player):
     def __init__(self, name, number, position, handedness, hits, at_bats):
         super().__init__(name, number, position, handedness)
@@ -46,7 +45,7 @@ class Pitcher(Player):
         return self.wins / self.starts
 
     def advertise(self):
-        print(f'Win Percentage: {self.win_pct()*100:.0f}%')
+        print(f'Win Percentage: {self.win_pct():.3f}')
 
 if __name__ == "__main__":
 
